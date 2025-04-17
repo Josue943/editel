@@ -5,11 +5,11 @@ import Pemex from "../../public/logos/pemex.png";
 import ContactForm from "./contactForm";
 import { useState } from "react";
 
-const imageProps = {
+/* const imageProps = {
   alt: "sirve",
   width: 50,
   className: "mr-3 carousel-item",
-};
+}; */
 
 const Clients = () => {
   const [showModal, setShowModal] = useState<boolean>(false);

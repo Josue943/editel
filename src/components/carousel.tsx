@@ -6,9 +6,9 @@ import Slider from "react-slick";
 
 import obra1 from "../../public/main/obra1.jpg";
 import obra2 from "../../public/main/obra2.jpg";
-import obra3 from "../../public/main/obra3.jpg";
+/* import obra3 from "../../public/main/obra3.jpg";
 import obra4 from "../../public/main/obra4.jpg";
-import obra5 from "../../public/main/obra5.jpg";
+import obra5 from "../../public/main/obra5.jpg"; */
 
 const Carousel = () => (
   <div className="overflow-hidden">
