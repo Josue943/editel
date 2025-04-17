@@ -6,10 +6,10 @@ interface Props {
 }
 
 const ContactForm = ({ onClose }: Props) => {
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
-  const handleClickOutside = (event: any) => {
-    if (ref.current && !ref.current.contains(event.target)) onClose();
+  const handleClickOutside = (event) => {
+    if (ref.current && !ref.current.contains(event?.target)) onClose();
   };
 
   useEffect(() => {

@@ -62,7 +62,7 @@ const Clients = () => {
 
 export default Clients;
 
-const cardDetails: any = {
+const cardDetails = {
   0: {
     imgUrl: Coppel,
     title: "Text 1",

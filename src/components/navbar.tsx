@@ -5,7 +5,7 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Logo from "../../public/logo.png";
 
-const navbar = () => {
+const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
   const handleOpen = () => setOpen(!open);
 
@@ -57,7 +57,7 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
 
 const items = [
   { label: "Inicio", href: "/" },
