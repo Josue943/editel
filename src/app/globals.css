@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --redColor:#C2373C;
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.flip-card {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+
+ .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #7aab39;
+  color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.flip-card-back {
+  background-color: var(--redColor);
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+} 
+
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  border-color: #4b5563;
+  width: 100%;
+}
+
+.carousel-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-card > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10%;
+}
+
+
+.carousel-track {
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  gap: 16px;
+  width: 200%;
+  height: 100%;
+  animation: slide 20s linear infinite;
+  &:hover {
+      animation-play-state: paused;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.custom-container{
+  width: 95%;
+  max-width: 1350px;
+  margin: auto;
+}
+
+
