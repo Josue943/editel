@@ -3,7 +3,6 @@ import Image from "next/image";
 import ContactForm from "./contactForm";
 import { useState } from "react";
 
-import Coppel from "../../public/logos/coppel.png";
 import Pemex from "../../public/logos/pemex.png";
 import Axtel from "../../public/logos/axtel.png";
 import Cfe from "../../public/logos/cfe.png";
@@ -16,7 +15,6 @@ import Super7 from "../../public/logos/super7.png";
 import Vialux from "../../public/logos/vialux.png";
 import One from "../../public/logos/one.png";
 import Telcel from "../../public/logos/telcel.png";
-import PartyInn from "../../public/logos/fiestainn.png";
 
 /* const imageProps = {
   alt: "sirve",
@@ -127,10 +125,6 @@ const cardDetails = {
   },
   13: {
     imgUrl: Telcel,
-    title: "Text 7",
-  },
-  14: {
-    imgUrl: PartyInn,
     title: "Text 7",
   },
 };
