@@ -3,7 +3,7 @@ import MissionImg from "../../public/images/mission.jpg";
 
 const Mision = () => {
   return (
-    <div className="bg-white text-black lg:p-4 md:p-2 sm:my-6 my-3">
+    <div className="bg-white text-black lg:p-4 md:p-2 sm:my-10 my-2">
       <div className="custom-container flex flex-col lg:flex-row xl:gap-8 gap-5 lg:gap-5 xl:py-5 py-2">
         <div className="flex-1 flex flex-col justify-center">
           <h4 className="sm:text-5xl text-3xl text-center font-bold sm:mb-6 mb-3 ">

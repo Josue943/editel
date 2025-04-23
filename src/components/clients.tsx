@@ -1,9 +1,22 @@
 "use client";
 import Image from "next/image";
-import Coppel from "../../public/logos/coppel.png";
-import Pemex from "../../public/logos/pemex.png";
 import ContactForm from "./contactForm";
 import { useState } from "react";
+
+import Coppel from "../../public/logos/coppel.png";
+import Pemex from "../../public/logos/pemex.png";
+import Axtel from "../../public/logos/axtel.png";
+import Cfe from "../../public/logos/cfe.png";
+import Harmak from "../../public/logos/harmak.png";
+import Movistar from "../../public/logos/movistar.png";
+import Multimedios from "../../public/logos/multimedios.png";
+import Naturgy from "../../public/logos/naturgy.png";
+import Oxxo from "../../public/logos/oxxo.png";
+import Super7 from "../../public/logos/super7.png";
+import Vialux from "../../public/logos/vialux.png";
+import One from "../../public/logos/one.png";
+import Telcel from "../../public/logos/telcel.png";
+import PartyInn from "../../public/logos/fiestainn.png";
 
 /* const imageProps = {
   alt: "sirve",
@@ -18,11 +31,11 @@ const Clients = () => {
   const onCloseModal = () => setShowModal(false);
 
   return (
-    <div className="custom-container pb-8">
-      <h4 className="text-5xl text-center font-bold mt-5 mb-7">
+    <div className="custom-container bg-red-50 sm:py-15 py-10">
+      <h4 className="text-2xl sm:text-4xl text-black text-center font-bold uppercase">
         Nuestros Clientes
       </h4>
-      <div className="carousel-container" style={{ height: 70 }}>
+      <div className="carousel-container  my-8 sm:my-18" style={{ height: 70 }}>
         <div className="carousel-track">
           {Object.keys(cardDetails).map((detailKey, index) => {
             return (
@@ -46,13 +59,13 @@ const Clients = () => {
           })}
         </div>
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center">
         <button
           className="bg-amber-600 p-2 rounded-md cursor-pointer"
           style={{ width: 130 }}
           onClick={onClick}
         >
-          Contactanos
+          Contáctanos
         </button>
       </div>
       {showModal && <ContactForm onClose={onCloseModal} />}
@@ -63,38 +76,61 @@ const Clients = () => {
 export default Clients;
 
 const cardDetails = {
-  0: {
-    imgUrl: Coppel,
-    title: "Text 1",
-  },
-
   1: {
     imgUrl: Pemex,
     title: "Text 2",
   },
 
   2: {
-    imgUrl: Coppel,
+    imgUrl: Axtel,
     title: "Text 3",
   },
 
   3: {
-    imgUrl: Pemex,
+    imgUrl: Cfe,
     title: "Text 4",
   },
 
   4: {
-    imgUrl: Coppel,
+    imgUrl: Harmak,
     title: "Text 5",
   },
 
   5: {
-    imgUrl: Pemex,
+    imgUrl: Movistar,
     title: "Text 6",
   },
 
   6: {
-    imgUrl: Coppel,
+    imgUrl: Multimedios,
+    title: "Text 7",
+  },
+  7: {
+    imgUrl: Naturgy,
+    title: "Text 7",
+  },
+  9: {
+    imgUrl: Oxxo,
+    title: "Text 7",
+  },
+  10: {
+    imgUrl: Super7,
+    title: "Text 7",
+  },
+  11: {
+    imgUrl: Vialux,
+    title: "Text 7",
+  },
+  12: {
+    imgUrl: One,
+    title: "Text 7",
+  },
+  13: {
+    imgUrl: Telcel,
+    title: "Text 7",
+  },
+  14: {
+    imgUrl: PartyInn,
     title: "Text 7",
   },
 };

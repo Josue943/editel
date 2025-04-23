@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import { X } from "lucide-react";
+import CustomInput from "@/app/form/input";
 
 interface Props {
   onClose: () => void;
@@ -33,36 +35,28 @@ const ContactForm = ({ onClose }: Props) => {
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <div
-            className="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg py-5"
-            style={{ background: "#C3C3C3" }}
+            className=" relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg pb-8"
+            style={{ background: "#e8e8e8" }}
             ref={ref}
           >
-            <h1 className="text-center text-black uppercase font-bold mb-5">
-              Contactanos
+            <div className="flex justify-end px-3 mt-4 mb-4">
+              <X
+                height={20}
+                color="black"
+                className="cursor-pointer"
+                onClick={onClose}
+              />
+            </div>
+            <h1 className="text-center text-2xl text-black uppercase font-bold mb-5">
+              contÁctanos
             </h1>
             <form className="max-w-sm mx-auto">
-              <div className="mb-5">
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm  text-black font-medium uppercase "
-                >
-                  Nombre
-                </label>
-                <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" />
-              </div>
+              <CustomInput name="name" label="Nombre" />
+              <CustomInput name="email" label="Email" />
               <div className="mb-5">
                 <label
                   htmlFor="password"
-                  className="block mb-2 text-sm text-black font-medium uppercase"
-                >
-                  Email
-                </label>
-                <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" />
-              </div>
-              <div className="mb-5">
-                <label
-                  htmlFor="password"
-                  className="block mb-2 text-sm text-black font-medium uppercase"
+                  className="block mb-2 text-sm text-black font-bold"
                 >
                   Mensaje
                 </label>
@@ -75,7 +69,7 @@ const ContactForm = ({ onClose }: Props) => {
                 type="submit"
                 className="text-white bg-amber-600 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
               >
-                Submit
+                Enviar
               </button>
             </form>
           </div>
