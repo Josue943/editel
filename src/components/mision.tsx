@@ -29,7 +29,7 @@ const Mision = () => {
             Republica Mexicana.
           </p>
         </div>
-        <div className="flex-1  h-60 sm:h-120 " style={{ overflow: "hidden" }}>
+        <div className="h-80 md:h-110 lg:flex-1" style={{ overflow: "hidden" }}>
           <Image src={MissionImg} alt="mission" style={{ height: "100%" }} />
         </div>
       </div>

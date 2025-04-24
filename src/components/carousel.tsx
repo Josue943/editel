@@ -14,8 +14,8 @@ const Carousel = () => (
   <div className="overflow-hidden">
     <Slider {...settings}>
       {items.map((item) => (
-        <div className="h-70 sm:h-160" key={item.alt}>
-          <Image {...item} />
+        <div className="h-70 sm:h-180" key={item.alt}>
+          <Image {...item} style={{ height: "100%" }} />
         </div>
       ))}
     </Slider>

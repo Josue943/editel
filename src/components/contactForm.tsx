@@ -35,7 +35,7 @@ const ContactForm = ({ onClose }: Props) => {
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <div
-            className=" relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg pb-8"
+            className="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all w-full sm:my-8 sm:w-full sm:max-w-lg pb-8"
             style={{ background: "#e8e8e8" }}
             ref={ref}
           >

@@ -1,6 +1,18 @@
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
+
 const Cards = () => {
+  const [openMenu, setOpenMenu] = useState<string[]>([]);
+
+  const handleMenu = (title: string) => {
+    setOpenMenu((prev) => {
+      if (prev.includes(title)) return prev.filter((item) => item !== title);
+      return [...prev, title];
+    });
+  };
+
   return (
-    <div className="custom-container bg-amber-950 py-20">
+    <div className="custom-container  xl:py-5 py-2">
       <h1 className="text-center text-black sm:text-5xl text-3xl mb-8 md:mb-12">
         <span className="text-amber-600">Servicios</span>
       </h1>
@@ -11,9 +23,26 @@ const Cards = () => {
             className="text-black "
             style={{ background: "#f7f7f7" }}
           >
-            <div className="bg-amber-900" style={{ height: 160 }}></div>
-            <div className="p-5">
-              <h6 className="text-xl mb-3 text-amber-600">{title}</h6>
+            <div className="flex flex-col-reverse sm:flex-col">
+              <div
+                className={`bg-amber-900 w-full ${
+                  openMenu.includes(title) ? "block" : "hidden"
+                }  sm:block`}
+                style={{ height: 160 }}
+              ></div>
+              <div className="flex justify-between pb-2">
+                <h6 className="text-xl text-amber-600">{title}</h6>
+                <ChevronDown
+                  className="sm:hidden"
+                  onClick={() => handleMenu(title)}
+                />
+              </div>
+            </div>
+            <div
+              className={`p-5 ${
+                openMenu.includes(title) ? "block" : "hidden"
+              }  sm:block`}
+            >
               <ul>
                 {items.map(({ id, description }) => (
                   <li
