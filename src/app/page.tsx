@@ -5,11 +5,13 @@ import Cards from "@/components/cards";
 import Carousel from "@/components/carousel";
 import Clients from "@/components/clients";
 import Mision from "@/components/mision";
+import Test from "@/components/test";
 
 export default function Home() {
   return (
     <div style={{ minHeight: "90vh" }}>
-      <Carousel />
+      {/*   <Carousel /> */}
+      <Test />
       <Mision />
       <Cards />
       <Clients />

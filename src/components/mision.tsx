@@ -1,14 +1,19 @@
 import Image from "next/image";
 import MissionImg from "../../public/images/mission.jpg";
+import Logo from "../../public/logo.png";
 
 const Mision = () => {
   return (
     <div className="bg-white text-black lg:p-4 md:p-2 sm:my-10 my-2">
       <div className="custom-container flex flex-col lg:flex-row xl:gap-8 gap-5 lg:gap-5 xl:py-5 py-2">
         <div className="flex-1 flex flex-col justify-center">
-          <h4 className="sm:text-5xl text-3xl text-center font-bold sm:mb-6 mb-3 ">
-            Grupo Editel
-          </h4>
+          <div className="flex items-center sm:mb-6 mb-3 py-4">
+            <h4 className="sm:text-5xl text-3xl text-center font-bold mr-5 ">
+              Grupo Editel
+            </h4>
+            <Image src={Logo} alt="logo" style={{ width: 200, height: 120 }} />
+          </div>
+
           <p className="sm:mb-5 mb-3 text-base">
             Somos una empresa innovadora de origen familiar, fundada en 1974 por
             el Ing. Jose González. Especializada en Telefonía, Construcción,
@@ -29,7 +34,7 @@ const Mision = () => {
             Republica Mexicana.
           </p>
         </div>
-        <div className="h-80 md:h-110 lg:flex-1" style={{ overflow: "hidden" }}>
+        <div className="lg:flex-1" style={{ overflow: "hidden" }}>
           <Image src={MissionImg} alt="mission" style={{ height: "100%" }} />
         </div>
       </div>

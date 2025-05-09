@@ -16,7 +16,6 @@ const Navbar = () => {
     >
       <div className="custom-container flex justify-between items-center py-3 ">
         <Image src={Logo} alt="logo" style={{ width: 100, height: 50 }} />
-
         <div className="sm:block hidden">
           <ul className="flex justify-end w-full text-black font-semibold">
             {items.map(({ label }) => (

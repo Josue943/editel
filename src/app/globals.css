@@ -71,6 +71,11 @@ body {
     animation-play-state: paused;
   }
 }
+@media only screen and (max-width: 600px) {
+  .carousel-track {
+    animation: slide 10s linear infinite;
+  }
+}
 
 @keyframes slide {
   0% {
