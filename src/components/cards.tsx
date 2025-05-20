@@ -14,7 +14,7 @@ const Cards = () => {
   };
 
   return (
-    <div className="custom-container xl:py-5 py-2">
+    <div id="services" className="custom-container xl:py-5 py-2" style={{scrollMargin:75}}>
       <h1 className="text-center text-black sm:text-5xl text-3xl mb-8 md:mb-12">
         <span className="text-amber-600">Servicios</span>
       </h1>

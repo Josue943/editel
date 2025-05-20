@@ -2,6 +2,9 @@
 import React, { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import CustomInput from "@/app/form/input";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { sentEmail } from "@/actions/email-actions";
+import { Inputs } from "@/interfaces/inputs";
 
 interface Props {
   onClose: () => void;
@@ -15,15 +18,29 @@ const ContactForm = ({ onClose }: Props) => {
   };
 
   useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
+    /*  document.addEventListener("click", handleClickOutside, true); */
+    document.body.style.overflow = 'hidden';
     return () => {
+      document.body.style.overflow = 'unset';
       document.removeEventListener("click", handleClickOutside, true);
     };
   }, []);
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    await sentEmail(data);
+  };
+
+  console.log({ errors });
+
   return (
     <div
-      className="relative z-10"
+      className="relative z-12"
       aria-labelledby="modal-title"
       role="dialog"
       aria-modal="true"
@@ -33,9 +50,9 @@ const ContactForm = ({ onClose }: Props) => {
         aria-hidden="true"
       ></div>
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div className="flex sm:min-h-full mt-30 sm:mt-0  items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <div
-            className="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all w-full sm:my-8 sm:w-full sm:max-w-lg pb-8"
+            className="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all w-full sm:my-8 sm:w-full sm:max-w-lg p-5 pb-8"
             style={{ background: "#e8e8e8" }}
             ref={ref}
           >
@@ -50,9 +67,30 @@ const ContactForm = ({ onClose }: Props) => {
             <h1 className="text-center text-2xl text-black uppercase font-bold mb-5">
               contÁctanos
             </h1>
-            <form className="max-w-sm mx-auto">
-              <CustomInput name="name" label="Nombre" />
-              <CustomInput name="email" label="Email" />
+            <form
+              className="max-w-sm mx-auto"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <CustomInput
+                label="Nombre"
+                name="name"
+                validation={{ required: true }}
+                error={!!errors["name"]}
+                register={register}
+              />
+              <CustomInput
+                label="Email"
+                name="email"
+                register={register}
+                error={!!errors["email"]}
+                validation={{
+                  required: true,
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "invalid email address",
+                  },
+                }}
+              />
               <div className="mb-5">
                 <label
                   htmlFor="password"
@@ -62,7 +100,10 @@ const ContactForm = ({ onClose }: Props) => {
                 </label>
                 <textarea
                   rows={4}
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 "
+                  className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 ${
+                    errors["message"] ? "border-red-500 outline-red-500" : ""
+                  } `}
+                  {...register("message", { required: true })}
                 ></textarea>
               </div>
               <button
