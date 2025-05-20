@@ -17,7 +17,7 @@ export const sentEmail = async ({ name, email, message }: Inputs) => {
   try {
     await transporter.sendMail({
       from: `${name} ${email}`,
-      to: "Editel_07@hotmail.com",
+      to: "josue943@hotmail.com",
       subject: `consulta editel ${email}`,
       text: message
     });
