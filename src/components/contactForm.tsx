@@ -16,9 +16,9 @@ const ContactForm = ({ onClose }: Props) => {
 
   const ref = useRef<HTMLDivElement>(null);
 
-  const handleClickOutside = (event) => {
+  /*   const handleClickOutside = (event) => {
     if (ref.current && !ref.current.contains(event?.target)) onClose();
-  };
+  }; */
 
   useEffect(() => {
     /*  document.addEventListener("click", handleClickOutside, true); */

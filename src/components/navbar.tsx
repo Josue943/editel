@@ -31,7 +31,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (section && pathname === "/") onScroll(section);
-  }, [pathname]);
+  }, [pathname, section]);
 
   return (
     <nav
