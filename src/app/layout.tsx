@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,9 @@ export default function RootLayout({
         id="home"
       >
         <Navbar />
-        <div style={{ minHeight: "72.7vh" }}>{children}</div>
+        <Suspense>
+          <div style={{ minHeight: "72.7vh" }}>{children}</div>
+        </Suspense>
         <Footer />
       </body>
     </html>
