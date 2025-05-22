@@ -16,12 +16,6 @@ import Vialux from "../../public/logos/vialux.png";
 import One from "../../public/logos/one.png";
 import Telcel from "../../public/logos/telcel.png";
 
-/* const imageProps = {
-  alt: "sirve",
-  width: 50,
-  className: "mr-3 carousel-item",
-}; */
-
 const Clients = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -59,8 +53,7 @@ const Clients = () => {
       </div>
       <div className="flex justify-center">
         <button
-          className="bg-amber-600 p-2 rounded-md cursor-pointer"
-          style={{ width: 130 }}
+          className="bg-amber-600 sm:p-3 p-2 w-full sm:w-auto text-lg  sm:text-xl  rounded-md cursor-pointer"
           onClick={onClick}
         >
           Contáctanos

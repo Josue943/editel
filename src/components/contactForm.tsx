@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { X } from "lucide-react";
-import CustomInput from "@/app/form/input";
+import { useEffect, useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { X } from "lucide-react";
+
+import CustomFormItem from "@/app/form/input";
 import { sentEmail } from "@/actions/email-actions";
 import { Inputs } from "@/interfaces/inputs";
 
@@ -11,6 +12,8 @@ interface Props {
 }
 
 const ContactForm = ({ onClose }: Props) => {
+  const [loading, setLoading] = useState<boolean>(false);
+
   const ref = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event) => {
@@ -19,10 +22,10 @@ const ContactForm = ({ onClose }: Props) => {
 
   useEffect(() => {
     /*  document.addEventListener("click", handleClickOutside, true); */
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = 'unset';
-      document.removeEventListener("click", handleClickOutside, true);
+      document.body.style.overflow = "unset";
+      // document.removeEventListener("click", handleClickOutside, true);
     };
   }, []);
 
@@ -33,7 +36,15 @@ const ContactForm = ({ onClose }: Props) => {
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    await sentEmail(data);
+    try {
+      setLoading(true);
+      await sentEmail(data);
+    } catch (error) {
+      console.log(error);
+    }
+    setTimeout(() => {
+      onClose();
+    }, 3000);
   };
 
   console.log({ errors });
@@ -71,18 +82,20 @@ const ContactForm = ({ onClose }: Props) => {
               className="max-w-sm mx-auto"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <CustomInput
+              <CustomFormItem
                 label="Nombre"
                 name="name"
                 validation={{ required: true }}
-                error={!!errors["name"]}
+                error={errors["name"]}
                 register={register}
+                disabled={loading}
               />
-              <CustomInput
+              <CustomFormItem
                 label="Email"
                 name="email"
                 register={register}
-                error={!!errors["email"]}
+                error={errors["email"]}
+                disabled={loading}
                 validation={{
                   required: true,
                   pattern: {
@@ -91,27 +104,23 @@ const ContactForm = ({ onClose }: Props) => {
                   },
                 }}
               />
-              <div className="mb-5">
-                <label
-                  htmlFor="password"
-                  className="block mb-2 text-sm text-black font-bold"
-                >
-                  Mensaje
-                </label>
-                <textarea
-                  rows={4}
-                  className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 ${
-                    errors["message"] ? "border-red-500 outline-red-500" : ""
-                  } `}
-                  {...register("message", { required: true })}
-                ></textarea>
-              </div>
+              <CustomFormItem
+                label="Mensaje"
+                name="message"
+                register={register}
+                type="textarea"
+                validation={{ required: true }}
+                disabled={loading}
+                error={errors["message"]}
+              />
               <button
+                disabled={loading}
                 type="submit"
                 className="text-white bg-amber-600 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
               >
                 Enviar
               </button>
+              {loading && <span className="loader mt-3"></span>}
             </form>
           </div>
         </div>

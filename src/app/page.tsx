@@ -8,12 +8,12 @@ import Test from "@/components/test";
 
 export default function Home() {
   return (
-    <div style={{ minHeight: "90vh" }}>
+    <>
       <Test />
       <Mision />
       <Cards />
       <Clients />
       <ReactWhatsappButton countryCode="52" phoneNumber="8127699019" animated />
-    </div>
+    </>
   );
 }
