@@ -6,9 +6,9 @@ import ReactWhatsappButton from "react-whatsapp-button";
 import Img from "../../../public/trajectory.png";
 
 const Trajectory = () => {
-  useEffect(() => {
+  /*   useEffect(() => {
     window.scroll(0, 0);
-  }, []);
+  }, []); */
 
   return (
     <div className="flex justify-center my-5 px-2">
