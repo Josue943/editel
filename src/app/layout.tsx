@@ -32,11 +32,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         id="home"
       >
-        <Navbar />
         <Suspense>
+          <Navbar />
           <div style={{ minHeight: "72.7vh" }}>{children}</div>
+          <Footer />
         </Suspense>
-        <Footer />
       </body>
     </html>
   );
