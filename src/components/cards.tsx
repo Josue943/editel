@@ -55,7 +55,7 @@ const Cards = () => {
                     />
                   </div>
                   <div className="flex justify-between items-center sm:pt-5 sm:pb-3 py-2 px-4 sm:text-center">
-                    <h6 className="text-xl w-full text-amber-600">{title}</h6>
+                    <p className="text-xl w-full text-amber-600">{title}</p>
                     <Icon
                       className="sm:hidden"
                       onClick={() => handleMenu(title)}

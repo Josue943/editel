@@ -34,9 +34,9 @@ export default function RootLayout({
       >
         <Suspense>
           <Navbar />
-          <div style={{ minHeight: "72.7vh" }}>{children}</div>
-          <Footer />
         </Suspense>
+        <div style={{ minHeight: "72.7vh" }}>{children}</div>
+        <Footer />
       </body>
     </html>
   );
