@@ -3,9 +3,10 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import image1 from "../../public/services/1.webp";
 import image2 from "../../public/services/2.jpg";
-import image3 from "../../public/services/3.png";
+import image3 from "../../public/services/3.jpg";
 import image4 from "../../public/services/4.jpg";
 import image5 from "../../public/services/5.jpg";
+import image6 from "../../public/services/6.jpg";
 
 const Cards = () => {
   const [openMenu, setOpenMenu] = useState<string[]>([]);
@@ -105,24 +106,19 @@ const services = [
     ],
   },
   {
-    title: "Automatización y telecomunicaciones",
-    img: image2,
+    title: "Telecomunicaciones",
+    img: image3,
     items: [
       {
         id: 0,
         description:
           "Implementación de sitios celulares y torres de telecomunicaciones.",
       },
-      {
-        id: 1,
-        description:
-          "Automatización de sistemas industriales,incluyendo plantas de emergencia y maquinaria.",
-      },
     ],
   },
   {
     title: "Proyectos energéticos",
-    img: image3,
+    img: image2,
     items: [
       { id: 0, description: "Construcción de subestaciones eléctricas." },
       { id: 1, description: "Instalación de sistemas eléctricos." },
@@ -156,6 +152,17 @@ const services = [
         id: 0,
         description:
           "Diseño y construcción de residencias y desarrollos adaptados a necesidades específicas.",
+      },
+    ],
+  },
+  {
+    title: "Automatización de procesos industriales",
+    img: image6,
+    items: [
+      {
+        id: 0,
+        description:
+          "Automatización de sistemas industriales, incluyendo plantas de emergencia y maquinaria.",
       },
     ],
   },
