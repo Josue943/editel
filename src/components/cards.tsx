@@ -118,7 +118,7 @@ const services = [
   },
   {
     title: "Proyectos energéticos",
-    img: image2,
+    img: image4,
     items: [
       { id: 0, description: "Construcción de subestaciones eléctricas." },
       { id: 1, description: "Instalación de sistemas eléctricos." },
@@ -130,7 +130,7 @@ const services = [
   },
   {
     title: "Mantenimiento y rehabilitación",
-    img: image4,
+    img: image2,
     items: [
       {
         id: 0,
