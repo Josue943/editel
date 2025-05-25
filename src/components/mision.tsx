@@ -1,7 +1,7 @@
 import Image from "next/image";
 import MissionImg from "../../public/images/mission.jpg";
 import Logo from "../../public/logo.png";
-import Link from "next/link";
+/* import Link from "next/link"; */
 
 const Mision = () => {
   return (
@@ -36,7 +36,7 @@ const Mision = () => {
           </p>
 
           {/*   <Link href={"/trayectoria"}></Link> */}
-          <button className="button-animation nt-2">Trayectoria</button>
+          <button className="button-animation mt-2">Trayectoria</button>
         </div>
         <div className="lg:flex-1" style={{ overflow: "hidden" }}>
           <Image src={MissionImg} alt="mission" style={{ height: "100%" }} />
