@@ -1,6 +1,8 @@
 import Image from "next/image";
 import MissionImg from "../../public/images/mission.jpg";
 import Logo from "../../public/logo.png";
+import Hand from "../../public/images/hand.png";
+import Link from "next/link";
 /* import Link from "next/link"; */
 
 const Mision = () => {
@@ -35,8 +37,22 @@ const Mision = () => {
             Republica Mexicana.
           </p>
 
-          {/*   <Link href={"/trayectoria"}></Link> */}
-          <button className="button-animation mt-2">Trayectoria</button>
+          <div className="flex justify-center">
+            <div className="relative w-full sm:w-80">
+              <Link
+                href="/trayectoria"
+                className="button-animation text-center mt-5  w-full"
+              >
+                Trayectoria
+              </Link>
+              <Image
+                src={Hand}
+                alt="click"
+                height={65}
+                className="absolute top-8 sm:right-10 right-30"
+              />
+            </div>
+          </div>
         </div>
         <div className="lg:flex-1" style={{ overflow: "hidden" }}>
           <Image src={MissionImg} alt="mission" style={{ height: "100%" }} />
