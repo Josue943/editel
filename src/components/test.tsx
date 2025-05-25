@@ -5,7 +5,7 @@ const Test = () => (
     <div className="custom-container py-3 text-white flex flex-col sm:flex-row items-center">
       <div className="flex mr-8 pb-3 sm:pb-0">
         <Phone className="mr-3" />
-        <h3> +81 81 2333 2525</h3>
+        <h3>+81 2333 2525</h3>
       </div>
       <div className="flex mr-8 pb-3 sm:pb-0">
         <Mail className="mr-3" />

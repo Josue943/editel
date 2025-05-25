@@ -35,12 +35,8 @@ const Mision = () => {
             Republica Mexicana.
           </p>
 
-          <Link
-            className="bg-amber-600 text-center mt-2 p-2 w-full text-white sm:text-lg  rounded-md cursor-pointer"
-            href={"/trayectoria"}
-          >
-            Trayectoria
-          </Link>
+          {/*   <Link href={"/trayectoria"}></Link> */}
+          <button className="button-animation nt-2">Trayectoria</button>
         </div>
         <div className="lg:flex-1" style={{ overflow: "hidden" }}>
           <Image src={MissionImg} alt="mission" style={{ height: "100%" }} />

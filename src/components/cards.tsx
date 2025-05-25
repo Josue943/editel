@@ -4,7 +4,7 @@ import Image from "next/image";
 import image1 from "../../public/services/1.webp";
 import image2 from "../../public/services/2.jpg";
 import image3 from "../../public/services/3.jpg";
-import image4 from "../../public/services/4.jpg";
+import image4 from "../../public/services/4.png";
 import image5 from "../../public/services/5.jpg";
 import image6 from "../../public/services/6.jpg";
 
