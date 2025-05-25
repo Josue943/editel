@@ -53,7 +53,7 @@ const Clients = () => {
       </div>
       <div className="flex justify-center">
         <button
-          className="bg-amber-600 sm:p-3 p-2 w-full sm:w-90 text-lg  sm:text-xl  rounded-md cursor-pointer"
+          className="bg-amber-600 text-white sm:p-3 p-2 w-full sm:w-90 text-lg  sm:text-xl  rounded-md cursor-pointer"
           onClick={onClick}
         >
           Contáctanos
