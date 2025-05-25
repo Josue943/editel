@@ -13,7 +13,7 @@ const Footer = () => (
 
           <h4 className="flex items-center md:justify-normal justify-center">
             <Phone height={16} style={{ marginBottom: 1 }} />
-            <span className="ml-1">+81 81 2333 2525</span>
+            <span className="ml-1">+81 2333 2525</span>
           </h4>
         </div>
 
@@ -24,7 +24,7 @@ const Footer = () => (
           </h4>
           <h4 className="flex items-center md:justify-normal justify-center">
             <Phone height={16} style={{ marginBottom: 1 }} />
-            <span className="ml-1">+81 81 1904 9112</span>
+            <span className="ml-1">+81 1904 9112</span>
           </h4>
         </div>
       </div>
