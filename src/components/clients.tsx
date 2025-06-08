@@ -17,7 +17,7 @@ import One from "../../public/logos/one.png";
 import Telcel from "../../public/logos/telcel.png";
 
 const Clients = () => {
-  const [showModal, setShowModal] = useState<boolean>(true);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const onClick = () => setShowModal(true);
   const onCloseModal = () => setShowModal(false);
