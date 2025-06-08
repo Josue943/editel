@@ -17,7 +17,7 @@ import One from "../../public/logos/one.png";
 import Telcel from "../../public/logos/telcel.png";
 
 const Clients = () => {
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<boolean>(true);
 
   const onClick = () => setShowModal(true);
   const onCloseModal = () => setShowModal(false);
@@ -53,7 +53,7 @@ const Clients = () => {
       </div>
       <div className="flex justify-center">
         <button
-          className="bg-amber-600 text-white sm:p-3 p-2 w-full sm:w-90 text-lg  sm:text-xl  rounded-md cursor-pointer"
+          className="bg-amber-600 text-white sm:p-3 p-2 w-full sm:w-90 text-lg  sm:text-xl  rounded-md cursor-pointer hover:bg-amber-700"
           onClick={onClick}
         >
           Contáctanos
