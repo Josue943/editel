@@ -1,6 +1,6 @@
 import Image from "next/image";
 import MissionImg from "../../public/images/mission.jpg";
-import Logo from "../../public/logo.png";
+import Logo from "../../public/logoEditel.jpg";
 import Hand from "../../public/images/hand.png";
 import Link from "next/link";
 /* import Link from "next/link"; */
@@ -12,9 +12,6 @@ const Mision = () => {
         <div className="flex-1 flex flex-col justify-center">
           <div className="flex items-center sm:mb-6 mb-3 py-4">
             <Image src={Logo} alt="logo" style={{ width: 200, height: 120 }} />
-            <h4 className="sm:text-5xl text-3xl text-center font-bold mr-5 ">
-              Grupo Editel
-            </h4>
           </div>
 
           <p className="sm:mb-5 mb-3 text-base">
