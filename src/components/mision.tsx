@@ -10,8 +10,13 @@ const Mision = () => {
     <div className="bg-white text-black lg:p-4 md:p-2 sm:my-10 my-2">
       <div className="custom-container flex flex-col lg:flex-row xl:gap-8 gap-5 lg:gap-5 xl:py-5 py-2">
         <div className="flex-1 flex flex-col justify-center">
-          <div className="flex items-center sm:mb-6 mb-3 py-4">
-            <Image src={Logo} alt="logo" style={{ width: 200, height: 120 }} />
+          <div className="flex items-center lg:justify-start justify-center sm:mb-6 mb-3 py-1  md:py-4 ">
+            <Image
+              src={Logo}
+              alt="logo"
+              className="lg:w-130 md:w-100 w-80"
+              style={{ height: 120 }}
+            />
           </div>
 
           <p className="sm:mb-5 mb-3 text-base">
