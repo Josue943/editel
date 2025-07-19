@@ -16,7 +16,7 @@ const Footer = () => (
             <span className="ml-1">+81 2769 9019</span>
           </h4>
         </div>
-        <div>
+        <div className="mt-2">
           <h4 className="flex items-center md:justify-normal justify-center">
             <CircleUser height={16} style={{ marginBottom: 1 }} />
             <span className="ml-1">José González</span>
