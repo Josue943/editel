@@ -44,7 +44,7 @@ const ContactForm = ({ onClose }: Props) => {
     }
     setTimeout(() => {
       onClose();
-    }, 3000);
+    }, 2500);
   };
 
   console.log({ errors });
