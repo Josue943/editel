@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Head from "next/head";
+import Script from "next/script";
 
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -28,6 +30,37 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>
+          Constructora Civil MX | Construcción Profesional en México |
+          Constructora Monterrey
+        </title>
+        <meta
+          name="description"
+          content="Constructora Civil MX ofrece servicios de construcción de alta calidad en México. Especialistas en obra civil, residencial y comercial. Contáctanos hoy."
+        />
+        <meta
+          name="keywords"
+          content="constructora, construcción, México, obra civil, edificios, casas, constructoras en México, Constructora Monterrey"
+        />
+        <meta name="author" content="Editel" />
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-EPM3ZP1BXK" // 👈 reemplaza con tu ID
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-EPM3ZP1BXK');
+            `,
+          }}
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         id="home"
