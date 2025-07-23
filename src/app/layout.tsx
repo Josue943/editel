@@ -44,6 +44,8 @@ export default function RootLayout({
           content="constructora, construcción, México, obra civil, edificios, casas, constructoras en México, Constructora Monterrey"
         />
         <meta name="author" content="Editel" />
+      </Head>
+      <head>
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-EPM3ZP1BXK" // 👈 reemplaza con tu ID
@@ -60,7 +62,7 @@ export default function RootLayout({
             `,
           }}
         />
-      </Head>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         id="home"
