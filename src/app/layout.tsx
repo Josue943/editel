@@ -44,6 +44,7 @@ export default function RootLayout({
           content="constructora, construcción, México, obra civil, edificios, casas, constructoras en México, Constructora Monterrey"
         />
         <meta name="author" content="Editel" />
+        <link rel="canonical" href="https://editelmx.com/" />
       </Head>
       <head>
         <Script
